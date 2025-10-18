@@ -1,0 +1,150 @@
+.ul {
+    list-style: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+    grid-template-areas: 
+        "header" 
+        "main" 
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    padding: 15px;
+    background-color: brown;
+    display: grid;
+    align-items: center;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+
+.header-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    grid-column: 2 / 3;
+}
+
+.header-menu {
+    grid-column: 3 / 4;
+}
+
+.header-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    list-style-type: none;
+}
+
+.header-link {
+    color: white;
+    font-size: 18px;
+}
+
+.main {
+    grid-area: main;
+    padding: 30px 15px;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+
+.sidebar {
+    grid-column: 2 / 3;
+    background-color: greenyellow;
+    padding: 30px 15px;
+}
+
+.sidebar-link {
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar-list li {
+    margin: 0px 0px 15px 0px;
+}
+
+.content {
+    grid-column: 3 / 4;
+    padding: 0px 0px 0px 30px;
+}
+
+.content-gallery {
+    margin: 0px 0px 30px 0px;
+}
+
+.gallery-items {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-item {
+    position: relative;
+    padding: 0px 0px 85% 0px;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item-big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.products-item {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+
+.products-items {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.products-image {
+    position: relative;
+    padding: 0px 0px 90% 0px;
+    margin: 0px 0px 20px 0px;
+}
+
+.products-name {
+    font-size: 24px;
+    color: white;
+    line-height: 30px;
+    margin: 0px 0px 20px 0px;
+}
+
+.products-button {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background-color: purple;
+    padding: 0px 20px;
+}
+
+.products-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: purple;
+}
